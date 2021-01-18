@@ -1,0 +1,29 @@
+<div id="web1" class="container my-5">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card p-0 border-0 shadow">
+                <div class="card-body">
+                    <img src="{{dersler.egitmenfoto}}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <br><br>
+            <h2>{{dersler.dersAdi}}</h2>
+            <h4 class="text-secondary"> {{dersler.egitmen}}
+            </h4> <br><br><br><br>
+            <hr>
+            <h5>Öğrenecekleriniz</h5>
+            <ul>
+                <li>{{dersler.ogrenecekler}}</li>
+            </ul> <br><br>
+            <h5>Fiyat Bilgisi</h5>
+            <ul>
+                <li>Saat Ücreti: {{dersler.fiyat}} </li>
+            </ul>
+            <hr>
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

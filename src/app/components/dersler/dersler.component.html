@@ -1,0 +1,26 @@
+<app-yonetim></app-yonetim>
+<div class="container mt-3">
+    <button class="btn btn-primary" [routerLink]="['/dersekle']">Ders Ekle</button>
+</div>
+<table class="table table-striped mt-5 ml-4 mr-4">
+    <thead>
+        <tr>
+            <th scope="col">Eğitmen Foto</th>
+            <th scope="col">Eğitmen</th>
+            <th scope="col">Ders Adı</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">ogrenecekler</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ders of dersler">
+            <td><img src="{{ders.egitmenfoto}}" alt="" width="100"></td>
+            <td>{{ders.egitmen}}</td>
+            <td>{{ders.dersAdi}}</td>
+            <td>{{ders.fiyat}}</td>
+            <td>{{ders.ogrenecekler}}</td>
+            <td><button class="btn btn-warning btn-sm mr-3" [routerLink]="['/dersduzenle',ders.key]">Güncelle</button><button class="btn btn-danger btn-sm" (click)="Sil(ders)">Sil</button></td>
+        </tr>
+    </tbody>
+</table>

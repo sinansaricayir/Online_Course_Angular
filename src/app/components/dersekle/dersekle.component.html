@@ -1,0 +1,40 @@
+<app-yonetim></app-yonetim>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+
+            <form #frm="ngForm" (ngSubmit)="Kaydet()">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h4>Kayıt Ekle</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Eğitmen Fotoğraf</label>
+                            <input type="text" class="form-control" name="foto" [(ngModel)]="secDers.egitmenfoto" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Eğitmen</label>
+                            <input type="text" class="form-control" name="egitmen" [(ngModel)]="secDers.egitmen" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ders Adı</label>
+                            <input type="text" class="form-control" name="dersAdi" [(ngModel)]="secDers.dersAdi" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ders Fiyatı</label>
+                            <input type="text" class="form-control" name="fiyat" [(ngModel)]="secDers.fiyat" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Öğrenilecekler</label>
+                            <textarea class="form-control is-invalid" name="ogrenecekler" [(ngModel)]="secDers.ogrenecekler" required></textarea>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <input type="submit" value="Kaydet" class="btn btn-outline-success" [disabled]="frm.invalid">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

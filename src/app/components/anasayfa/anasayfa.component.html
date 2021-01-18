@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <h1 class="display-4 text-center mb-2 ">Daha Fazlasını Hedefleyin ! </h1>
+    <p class="text-center mb-5"> <i>Eğitim almak bir adım önde olmanızı sağlar.<br> İnsanları etkilemek için popüler
+            yetkinlikler edinin.</i> </p>
+
+    <div class="clearfix">
+        <hr>
+    </div>
+    <div class="card-columns">
+        <div class="card border-0 shadow" *ngFor="let ders of dersler">
+            <img src="{{ders.egitmenfoto}}" class="card-img-top">
+            <div class="card-body">
+                <h6>{{ders.dersAdi}}</h6>
+                <button [routerLink]="['/detay',ders.key]" id="mp1" class="btn btn-outline-primary btn-black">Detay</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
